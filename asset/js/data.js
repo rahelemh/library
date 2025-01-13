@@ -8,6 +8,7 @@ const BOOKS = [
         genre: "تاریخ",
         imgSrc: "1.jpg"
     },
+    //8y7tfc
     {
         id: 2,
         title: "ضیافت",
