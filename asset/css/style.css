@@ -1,0 +1,83 @@
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+.root{
+    
+    
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 10px;
+    flex-direction: row;
+    justify-content: center;
+
+}
+.headin{
+    background-color: black;
+    color: beige;
+    padding: 20px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 1px rgb(171, 171, 171);
+}
+.filtermenu{
+    background-color: rgb(8, 8, 8);
+    width: 20%;
+    height: 800px;
+    border-radius: 10px;
+}
+.books{
+    
+    width: calc(100% - 20% - 20px);
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.card{
+    width: 180px;
+    height: 330px;
+    background-color: rgb(253, 253, 253);
+    border-radius: 12px;
+    margin-top: 30px;
+    padding: 5px;
+    box-shadow: 6px 6px 6px 6px #a6a6a6;
+    position: relative;
+    
+}
+.up{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(8, 8, 8);
+    color: rgb(235, 235, 235);
+    position: absolute;
+    top: 1px;
+    width: 100%;
+    left: 0px;
+    height: 30px;
+    justify-content: centrer;
+    padding-top: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 12px;
+}
+
+.card img{
+    width: 100%;
+    height: 250px;
+}
