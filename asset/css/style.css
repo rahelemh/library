@@ -9,6 +9,21 @@ a{
     padding: 0;
 }
 
+.item{
+    color: azure;
+    margin: 10px ;
+}
+.lan{
+    padding: 10px;
+    margin: 10px;
+    color:white ;
+}
+#authorss{
+    color: white;
+    padding: 20px;
+    border-bottom: 0.5px solid whitesmoke;
+
+}
 
 .root{
     
@@ -34,10 +49,19 @@ a{
 }
 .filtermenu{
     background-color: rgb(8, 8, 8);
-    width: 20%;
-    height: 800px;
+    width: 20%;       
+    height: 900px;          
     border-radius: 10px;
+
 }
+.lan{
+    border-bottom: 0.5px solid white;
+}
+.genre{
+    color: aliceblue;
+    padding: 15px;
+}
+
 .books{
     
     width: calc(100% - 20% - 20px);
