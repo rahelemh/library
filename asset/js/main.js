@@ -29,6 +29,20 @@ function render(list){
 render(BOOKS);
 
 
+//FILTER BY ME:
+const filters=document.getElementById("menif")
+
+//GET FILTERS ID:
+function calcFilters(){
+    
+}
+
+
+
+
+
+
+
 //GETTING DOMS:
 const filterMenu=document.getElementById("authorss");
 
@@ -47,8 +61,8 @@ function makeFilterList(){
     const temp = authorsName.map(aut  => {
     return`
     <div class="item">
-    <input type="checkbox" id="${aut}" value="${aut}" onchange="addAuothorFilter(event)"  class="check" />
-    <label for="${aut}" class="check" >${aut}</label>
+    <input type="checkbox" id="${aut} class="check" />
+    <label for="${aut}" class="check">${aut}</label>
 </div>
     `
 }).join("");
@@ -74,8 +88,7 @@ for(const lang of BOOKS) {
 const tep=zaban.map(zabun => {
      return`
     <div class="item">
-
-    <input type="checkbox" id="${zabun}" class="check" value="${zabun}"  onchange="zabanFilterAdd(event)" />
+    <input type="checkbox" id="${zabun} class="check" />
     <label for="${zabun}" class="check">${zabun}</label>
 </div>
     `
@@ -83,6 +96,9 @@ const tep=zaban.map(zabun => {
 lang.innerHTML+=tep
 }
 getLan();
+
+
+
 
 //GETTING DOM:
 const gen=document.getElementById("gen");
@@ -99,7 +115,7 @@ function genreGet(){
     const t=genr.map(ger=>{
     return`
     <div class="item">
-    <input type="checkbox" id="${ger}" class="check" value="${ger}" onchange="filterAddGenre(event)" />
+    <input type="checkbox" id="${ger} class="check" />
     <label for="${ger}" class="check">${ger}</label>
 </div>
     `
@@ -107,64 +123,3 @@ function genreGet(){
 gen.innerHTML+=t
 }
 genreGet()
-
-//-----------------------------------------------------------------------------------------
-
-//FILTER PARTS----------------------------------------------------------------------------
-
-//FILTER CONTAINERS:
-const selectedAthors=[];
-const selectedGenres=[];
-const selectedLanguages=[];
-
-
-
-//ADDING TO AUTHORS CONTAUNER:
- function addAuothorFilter(evt){
-    
-    if(evt.target.checked){
-        selectedAthors.push(evt.target.value);
- console.log(selectedAthors)
-
-    }
-    else{
-        const hazfAuthor=selectedAthors.findIndex(item =>item === evt.target.value);
-        selectedAthors.splice(hazfAuthor,1);
- console.log(selectedAthors)
-
-
-
-    }
-
- }
-
-
- //ADDING FILTER TO LANGUAGES:
-
- function zabanFilterAdd(evt){
-    if(evt.target.checked){
-        selectedLanguages.push(evt.target.value);
-        console.log(selectedLanguages)
-    }
-    else{
-        const hazfZaban=selectedLanguages.indexOf(evt.target.value);
-        selectedLanguages.splice(hazfZaban,1);
-        console.log(selectedLanguages)
-    }
-
- }
-
-//ADDDING FILTER TO GENRES:
-function filterAddGenre(evt){
-    if(evt.target.checked){
-        selectedGenres.push(evt.target.value)
-        console.log(selectedGenres)
-
-    }
-    else{
-        const hazfGenre=selectedGenres.indexOf(evt.target.value);
-        selectedGenres.splice(hazfGenre,1)
-        console.log(selectedGenres)
-    }
-
-}
